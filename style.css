@@ -1,0 +1,86 @@
+/* Educational UI Styles */
+:root {
+    --primary-blue: #0d6efd;
+    --bg-body: #f7f9fc;
+    --soft-primary: #eef4ff;
+    --soft-success: #e7f7ef;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-body);
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, .sidebar-heading, .card-title {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Sidebar Wrapper */
+#sidebar-wrapper {
+    min-height: 100vh;
+    width: 260px;
+    z-index: 1000;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    min-width: 0;
+}
+
+/* Sidebar Items */
+.list-group-item {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.2s;
+}
+
+.list-group-item:hover {
+    background-color: var(--soft-primary);
+    color: var(--primary-blue);
+}
+
+.list-group-item.active {
+    background-color: var(--primary-blue) !important;
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.2);
+}
+
+/* Course Cards */
+.course-card {
+    transition: transform 0.3s ease;
+    border-radius: 15px;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+}
+
+.card-img-top {
+    height: 160px;
+    object-fit: cover;
+}
+
+/* Soft UI Badges */
+.bg-soft-primary { background-color: var(--soft-primary); }
+.bg-soft-success { background-color: var(--soft-success); }
+
+/* Upcoming Lessons Box */
+.date-box {
+    width: 50px;
+    line-height: 1.2;
+}
+
+.btn-soft-primary {
+    background-color: var(--soft-primary);
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+
+/* Responsive Sidebar Mobile Toggle */
+@media (max-width: 768px) {
+    #sidebar-wrapper {
+        display: none;
+    }
+}
